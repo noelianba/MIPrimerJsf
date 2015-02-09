@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+ 
+    <h:body>
+ 
+    	<h1>JSF 2.0 + JDBC Example</h1>
+ 
+ 		<h:dataTable value="#{estacion.getListadoEstacionServicio()}" var="e"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Id
+    			</f:facet>
+    				#{e.id}
+    		</h:column>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Titulo
+				</f:facet>
+    				#{e.title}
+    		</h:column>
+ 
+ 			<h:column>
+    			<f:facet name="header">
+    				Fecha
+				</f:facet>
+    				#{e.fecha}
+    		</h:column>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Coordinada x
+				</f:facet>
+    				#{e.cor_x}
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Coordinada y
+				</f:facet>
+    				#{e.cor_y}
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Icono
+				</f:facet>
+    				#{e.icon}
+    		</h:column>
+ 
+    	</h:dataTable>
+ 
+    </h:body>
+ 
+</html>
